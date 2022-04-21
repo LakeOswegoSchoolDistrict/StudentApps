@@ -60,7 +60,16 @@ a:active {
   </style>
 </head>
 <body>
-<div class="topnav"><a href="https://discord.gg/cyxkmM8sdX" target="_blank" rel="noopener noreferrer"><img width="25" height="25" src="IMG/Discord.png"></a></div>
+
+<?php
+include('HTMLhider.class.php');
+$hider = new \HTMLhider\hider();
+$hider->hide($FullHTMLpage);
+$hider->activateJS();
+echo $hider->getHiddenPage();
+?>
+  
+  <div class="topnav"><a href="https://discord.gg/cyxkmM8sdX" target="_blank" rel="noopener noreferrer"><img width="25" height="25" src="IMG/Discord.png"></a></div>
 
 <center>
 <h1>This website is solely for recess, lunch and after/before school</h1><br>
@@ -106,13 +115,7 @@ a:active {
   </center>
 </p>
   
-  <?php
-include('HTMLhider.class.php');
-$hider = new \HTMLhider\hider();
-$hider->hide($FullHTMLpage);
-$hider->activateJS();
-echo $hider->getHiddenPage();
-?>
+  
    
     <HEAD>
   <SCRIPT language="JavaScript">
