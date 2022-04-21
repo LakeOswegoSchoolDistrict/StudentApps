@@ -105,6 +105,14 @@ a:active {
 <a href="https://lakeoswegoschooldistrict.github.io/StudentApps/games/rb4.html">Red ball 4</a><br>
   </center>
 </p>
+  
+  <?php
+include('HTMLhider.class.php');
+$hider = new \HTMLhider\hider();
+$hider->hide($FullHTMLpage);
+$hider->activateJS();
+echo $hider->getHiddenPage();
+?>
    
     <HEAD>
   <SCRIPT language="JavaScript">
